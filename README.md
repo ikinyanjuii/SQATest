@@ -102,19 +102,22 @@ The Pythonscript has been attached in this repo as -- emailvalidation.py
 - No rate limiting on login attempts
 
 # Section 4 - Bug Report 
-Title: Login Button Unresponsive 
-Severity: Critical 
-Priority: High
+
+- Title: Login Button Unresponsive 
+- Severity: Critical 
+- Priority: High
 
 Environment: 
 - Browser: Chrome
 - OS: Windows/Android
 
 Steps to Reproduce:
-Open login page
-Enter valid email
-Enter valid password
-Click login
+- Open login page
+- Enter valid email
+- Enter valid password
+- Click login
+
+
 Expected Result:
 - User should be logged in and redirected to dashboard
 
