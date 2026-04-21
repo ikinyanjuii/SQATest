@@ -143,3 +143,36 @@ Attachments:
 (ScreenshotsVideo Recordings/logs if available)
 
 # Section Five - SIT Question 
+
+RCA 
+1. Reproduce the issue
+2. Trace transaction flow end-to-end
+3. Check if API call succeeded
+4. Verify if request reached core banking
+5. Systems & Logs to Check
+
+Details of Checks for the RCA
+1. Check Mobile App Logs
+- Confirm that the UI success triggers a transaction to the core banking system
+- Verify the API response received and correctness of the status and payload 
+2. API Gateway Logs
+- Request/response payload
+- Verify Status codes for successful transactions 
+3. Middleware / ESB
+- Check on the Message transformation
+- Queue status
+4. Core Banking System
+- Transaction logs
+- Debit processing
+5. Database
+- Verify presence of transaction records
+- Verify if there is a status mismatch
+6. Message Queues (Kafka/RabbitMQ)
+- Check for failed or stuck messages -- Recommend a retry mechanism 
+
+Likely Root Causes
+- UI showing success prematurely
+- API success but backend failure
+- Message not reaching core banking
+- Lack of a retry mechanism in the queue 
+- Timeout or async failure
