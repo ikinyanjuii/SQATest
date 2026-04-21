@@ -1,6 +1,6 @@
 # SQATest
 This is a repo for my submission for the QA Assistant Manager role at I&amp;M Bank
-## Section 1: API Testing
+# Section 1: API Testing
 Test Cases:
 1. TC01 - Test Case 1 - Valid Request (Positive Test Case)
 Steps
@@ -96,94 +96,50 @@ pm.test("The Expected Count is 10", function () {
 ![alt text](image.png)
 
 
-## Section 2 - Coding Task 
+# Section 2 - Coding Task 
 The Python file has been attached in this repo -- emailvalidation.py
 
-## Section 3 - UI Testing 
-# Functional Test Cases
+# Section 3 - UI Testing 
+### Functional Test Cases
 - Valid Login -- Enter correct email/password combination for a successful login
 - Email field validation -- Enter valid email format to proceed to login 
 - Password field input -- Enter correct password for the email provided for a successful login
 - Login button click -- Button triggers authentication when the email/password fields are populated 
 - Navigation after login -- User redirected to dashboard or homepage after successful login attempt
 
-# Negative Test Cases 
+### Negative Test Cases 
 - Invalid Email Format -- Error message displayed specifying that the email format is incorrect 
 - Empty fields -- Validation messages shown to prompt for input in the highlighted fields 
 - Wrong credentials -- Invalid Credentials error prompting the user to check their input and try again 
 
-# Possible Bugs
+### Possible Bugs
 - Login button not responsive
 - No validation for empty fields
 - Incorrect error messages
 - Password visible (not masked)
 - No rate limiting on login attempts
 
-## Section 4 - Bug Report 
+# Section 4 - Bug Report 
+Title: Login Button Unresponsive 
+Severity: Critical 
+Priority: High
 
+Environment: 
+- Browser: Chrome
+- OS: Windows/Android
 
-
-
-
-✅ SECTION 4: BUG REPORT
-Title:
-
-Login button does not respond after entering valid credentials
-
-Severity:
-
-Critical
-
-Priority:
-
-High
-
-Environment:
-Browser: Chrome
-OS: Windows/Android
 Steps to Reproduce:
 Open login page
 Enter valid email
 Enter valid password
 Click login
 Expected Result:
-
-User should be logged in and redirected to dashboard
+- User should be logged in and redirected to dashboard
 
 Actual Result:
-
-Nothing happens after clicking login
+- Nothing happens after clicking login
 
 Attachments:
+(ScreenshotsVideo Recordings/logs if available)
 
-(Screenshots/logs if available)
-
-✅ SECTION 5: SIT TESTING
-🔍 How to Investigate
-Reproduce the issue
-Trace transaction flow end-to-end
-Check if API call succeeded
-Verify if request reached core banking
-🔧 Systems & Logs to Check
-1. Mobile App Logs
-UI success trigger
-API response received
-2. API Gateway Logs
-Request/response payload
-Status codes
-3. Middleware / ESB
-Message transformation
-Queue status
-4. Core Banking System
-Transaction logs
-Debit processing
-5. Database
-Transaction records
-Status mismatch
-6. Message Queues (Kafka/RabbitMQ)
-Failed or stuck messages
-🎯 Likely Root Causes
-UI showing success prematurely
-API success but backend failure
-Message not reaching core banking
-Timeout or async failure
+# Section Five - SIT Question 
